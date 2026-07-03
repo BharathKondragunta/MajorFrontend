@@ -23,7 +23,13 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.bharathkondragunta.chainguard"
+      "package": "com.bharathkondragunta.chainguard",
+      "permissions": [
+        "INTERNET",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "usesCleartextTraffic": true
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +38,16 @@
     },
     "plugins": [
       "expo-router",
-      "expo-notifications"
+      "expo-notifications",
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
@@ -40,8 +55,9 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "a2372bf6-db20-4adc-9fdf-eaebe3be0db9"
+        "projectId": "3a983c52-1c53-4c85-9f0d-53a555dd9031"
       }
-    }
+    },
+    "owner": "gunavardhan26"
   }
 }
